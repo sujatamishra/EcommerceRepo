@@ -8,7 +8,7 @@ services:
 before_script: pip3 install docker-compose
 
 script:
-  - docker-compose run web python3 manage.py test
+  - docker-compose run  python3 manage.py test
 
 deploy:
     provider: script
