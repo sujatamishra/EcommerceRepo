@@ -8,11 +8,4 @@ services:
 before_script: pip3 install docker-compose
 
 script:
-  - docker-compose run web python3 manage.py test
-  
-deploy:
-    provider: script
-    script: bash docker_push.sh
-    skip_cleanup: true
-    on:
-        branch: master
+  - docker-compose run web sh -c "python3 manage.py test"
