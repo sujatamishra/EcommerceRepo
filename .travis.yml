@@ -5,8 +5,8 @@ python:
 services:
   - docker
 
-before_script: pip3 install docker-compose
-               docker-compose build
+before_script: - pip3 install docker-compose
+               - sudo docker-compose build
 
 script:
   - docker-compose run web sh -c "python3 manage.py test"
