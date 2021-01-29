@@ -4,7 +4,7 @@ from .models import Product
 
 # Create your tests here.
 
- """class ProductTestCase(TestCase):
+ class ProductTestCase(TestCase):
 
     def setUp(self):
         Product.objects.create(name="spoon_222", price=10)
@@ -27,4 +27,4 @@ from .models import Product
         obj1=self.create_product(name=name,price=price)
        # obj2=self.create_product(name=name)
         qs=Product.objects.filter(name=name)
-        self.assertEqual(qs.count(), 1) """
+        self.assertEqual(qs.count(), 1)
