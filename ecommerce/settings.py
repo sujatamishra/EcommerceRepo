@@ -84,14 +84,7 @@ DATABASES = {
         'NAME': 'ecommDB',
         'USER':'root',
         'PASSWORD':'Root@123',
-        'HOST':'db',
-        'PORT': 3306,
-        'CHARSET': 'utf8',
-        'COLLATION': 'utf8_bin',
-        'OPTIONS': {
-            'use_unicode' : True,
-            'init_command': 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
-        },
+        #'HOST':'db',
     }
 }
 
