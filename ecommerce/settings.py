@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'ecommDB',
         'USER':'root',
         'PASSWORD':'Root@123',
-        'HOST':'192.168.0.102',
+        'HOST':'49.204.225.46',
     }
 }
 
