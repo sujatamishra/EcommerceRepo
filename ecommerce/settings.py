@@ -85,9 +85,6 @@ DATABASES = {
         'USER':'root',
         'PASSWORD':'Root@123',
         'HOST':'db',
-        'TEST': {
-            'NAME': 'test_ecommDB',
-        },
     }
 }
 
