@@ -84,7 +84,10 @@ DATABASES = {
         'NAME': 'ecommDB',
         'USER':'root',
         'PASSWORD':'Root@123',
-        #'HOST':'db',
+        'HOST':'db',
+        'TEST': {
+            'NAME': 'test_ecommDB',
+        },
     }
 }
 
