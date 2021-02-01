@@ -5,8 +5,12 @@ python:
 services:
   - docker
 
-before_script: pip3 install docker-compose
+ before_install:
+    - sudo service mysql stop
+    - sudo docker-compose up -d --build
+    - sudo docker exec -it web bash -c \"python3 manage.py test\""
 
+before_script: pip3 install docker-compose
 
 script:
   - docker-compose run web sh -c "python3 manage.py test"

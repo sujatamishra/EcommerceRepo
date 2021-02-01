@@ -21,4 +21,3 @@ services:
     command: python3 manage.py runserver 0.0.0.0:8000
     depends_on:
       - db
-    entrypoint: wait-for-it.sh db:3306 -- entrypoint.sh
