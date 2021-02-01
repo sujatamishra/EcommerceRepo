@@ -26,13 +26,12 @@ after_success:
 
 deploy:
   - provider: elasticbeanstalk
+  - access_key_id: "$AWS_ACCESS_KEY"
+  - secret_access_key: "$AWS_SECRET_KEY"
+  - on:
+      branch: master
   - region: "us-east-2"
   - app: "ecomm-docker-web"
   - env: "Ecommdockerweb-env"
   - bucket-name: "elasticbeanstalk-us-east-2-677585450238"
   - bucket-path: "ecomm-docker-web"
-  - on:
-      branch: master
-  - access_key_id: "AKIAII4AKWAYFDTAMDQA"
-  - secret_access_key :
-       secure: "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"
