@@ -33,6 +33,6 @@ deploy:
   - bucket-path: "ecomm-docker-web"
   - on:
       branch: master
-  - access_key_id: $AWS_ACCESS_KEY
+  - access_key_id: "AKIAII4AKWAYFDTAMDQA"
   - secret_access_key :
-       secure: "$AWS_SECRET_KEY"
+       secure: "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"
