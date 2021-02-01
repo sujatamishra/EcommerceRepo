@@ -5,7 +5,7 @@ python:
 services:
   - docker
 
- before_install: sudo service mysql stop
+before_install: sudo service mysql stop
 
 before_script: pip3 install docker-compose
 
