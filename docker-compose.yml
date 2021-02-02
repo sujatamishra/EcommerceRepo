@@ -1,8 +1,8 @@
 version: '3'
 services:
   db:
-    network_mode: host
     image: mysql:5.7.31
+    network_mode: host
     ports:
       - '3306:3306'
     restart: always
@@ -16,10 +16,10 @@ services:
 
 
   web:
-    network_mode: host
     build: .
     ports:
       - "80:8000"
+    network_mode: host
     command: python3 manage.py runserver 0.0.0.0:8000
     depends_on:
       - db
