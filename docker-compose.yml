@@ -1,6 +1,7 @@
 version: '3'
 services:
   db:
+    network_mode: host
     image: mysql:5.7.31
     ports:
       - '3306:3306'
@@ -15,6 +16,7 @@ services:
 
 
   web:
+    network_mode: host
     build: .
     ports:
       - "80:8000"
