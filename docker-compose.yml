@@ -2,7 +2,6 @@ version: '3'
 services:
   db:
     image: mysql:5.7.31
-    network_mode: host
     ports:
       - '3306:3306'
     restart: always
@@ -19,7 +18,9 @@ services:
     build: .
     ports:
       - "80:8000"
-    network_mode: host
-    command: python3 manage.py runserver 0.0.0.0:8000
+    command: python3 manage.py runserver 0:8000
+    #["./wait-for-mysql.sh", "db:3306", "--", "python3", "app.py"]
+    #python3 manage.py runserver 0:8000
     depends_on:
       - db
+
