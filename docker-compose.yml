@@ -18,7 +18,8 @@ services:
     build: .
     ports:
       - "80:8000"
-    command: python3 manage.py runserver 0:8000
+    command: ["./wait-for-mysql.sh", "db:3306", "--", "python3", "apps.py"]
+    #python3 manage.py runserver 0:8000
     #["./wait-for-mysql.sh", "db:3306", "--", "python3", "app.py"]
     #python3 manage.py runserver 0:8000
     depends_on:
