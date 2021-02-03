@@ -4,8 +4,7 @@ services:
     image: mysql:5.7.31
     ports:
       - '3306:3306'
-    container_name: db
-    network_mode: host  
+      
     restart: always
     environment:
       #- MYSQL_HOST=172.19.0.3
@@ -20,7 +19,7 @@ services:
     build: .
     ports:
       - "80:8000"
-    network_mode: host  
+    
     command: python3 manage.py runserver 0:8000
     #entrypoint: ./wait-for-mysql.sh db:3306 -- ./docker-entrypoint.sh  
     #command: ["./wait-for-mysql.sh", "db:3306", "--", "python3", "apps.py"]
