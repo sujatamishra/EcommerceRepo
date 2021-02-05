@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'store',
     'import_export',
     'django_filters',
+    'django_createsuperuserwithpassword',
 ]
 
 MIDDLEWARE = [
@@ -85,6 +86,7 @@ DATABASES = {
         'USER':'root',
         'PASSWORD':'Root@123',
         'HOST':'db',
+        
     }
 }
 
