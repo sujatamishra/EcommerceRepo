@@ -20,10 +20,10 @@ services:
     ports:
       - "80:8000"
     
-    #command: ["/app/wait-for-mysql.sh", "db", "3306", "Root@123", "ecommDB", "--", "python3", "manage.py", "runserver", "0.0.0.0:8000"]
-    command: ["/app/wait-for-mysql.sh", "db", "3306", "Root@123", "ecommDB"]
+    command: ["/app/wait-for-mysql.sh", "db", "3306", "Root@123", "ecommDB", "--", "python3", "manage.py", "runserver", "0.0.0.0:8000"]
+    #command: ["/app/wait-for-mysql.sh", "db", "3306", "Root@123", "ecommDB"]
     #command: bash -c "python3 manage.py makemigrations && python3 manage.py migrate && python3 manage.py createsuperuserwithpassword --username admin1 --password admin1 --email admin1@gmail.com  && python3 manage.py runserver 0.0.0.0:8000"
-    command: bash -c "python3 manage.py runserver 0.0.0.0:8000"
+    #command: bash -c "python3 manage.py runserver 0.0.0.0:8000"
 
     depends_on:
       - db
